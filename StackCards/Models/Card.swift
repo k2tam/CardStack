@@ -9,6 +9,13 @@ import SwiftUI
 
 struct Card {
     let question: String
+//    let id: String
+//    let closeIcon: String
+//    let ratingIcon: String
+//    let starIcon: String
+//    let starRating: Int
+//    let unsatisfiedText: String
+//    let satisfiedText: String
     
     init(question: String = "") {
         self.question = question

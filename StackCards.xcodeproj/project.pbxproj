@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05654E2C2B071DE500E9D97B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05654E2B2B071DE500E9D97B /* HomeVC.swift */; };
+		05654E2E2B071ECD00E9D97B /* RatingTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05654E2D2B071ECD00E9D97B /* RatingTblCell.swift */; };
+		05654E322B07231E00E9D97B /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05654E312B07231E00E9D97B /* HomeVM.swift */; };
 		05882A452B05C0E90084D9A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05882A442B05C0E90084D9A9 /* AppDelegate.swift */; };
 		05882A472B05C0E90084D9A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05882A462B05C0E90084D9A9 /* SceneDelegate.swift */; };
 		05882A492B05C0E90084D9A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05882A482B05C0E90084D9A9 /* ViewController.swift */; };
@@ -16,9 +19,19 @@
 		05882A5B2B05C7A20084D9A9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05882A5A2B05C7A20084D9A9 /* Extension.swift */; };
 		05882A5D2B05CA610084D9A9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05882A5C2B05CA610084D9A9 /* Card.swift */; };
 		05882A5F2B05CEF40084D9A9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05882A5E2B05CEF40084D9A9 /* CardView.swift */; };
+		05AB3EAB2B07BEF5009CB8A8 /* SupportProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AB3EAA2B07BEF5009CB8A8 /* SupportProcessView.xib */; };
+		05AB3EAD2B07BF14009CB8A8 /* SupportProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB3EAC2B07BF14009CB8A8 /* SupportProcessView.swift */; };
+		05BB0A312B07466800146FE4 /* SupportStatusTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB0A2F2B07466800146FE4 /* SupportStatusTblCell.swift */; };
+		05BB0A322B07466800146FE4 /* SupportStatusTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05BB0A302B07466800146FE4 /* SupportStatusTblCell.xib */; };
+		05BB0A3D2B07670D00146FE4 /* SupportProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BB0A3C2B07670D00146FE4 /* SupportProcess.swift */; };
+		E0AA99A89F0A9E52431885F1 /* Pods_StackCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0212E8D9E41D0E4E9A7573C8 /* Pods_StackCards.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0212E8D9E41D0E4E9A7573C8 /* Pods_StackCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05654E2B2B071DE500E9D97B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		05654E2D2B071ECD00E9D97B /* RatingTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTblCell.swift; sourceTree = "<group>"; };
+		05654E312B07231E00E9D97B /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		05882A412B05C0E90084D9A9 /* StackCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05882A442B05C0E90084D9A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05882A462B05C0E90084D9A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +43,13 @@
 		05882A5A2B05C7A20084D9A9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		05882A5C2B05CA610084D9A9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		05882A5E2B05CEF40084D9A9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		05AB3EAA2B07BEF5009CB8A8 /* SupportProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportProcessView.xib; sourceTree = "<group>"; };
+		05AB3EAC2B07BF14009CB8A8 /* SupportProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportProcessView.swift; sourceTree = "<group>"; };
+		05BB0A2F2B07466800146FE4 /* SupportStatusTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportStatusTblCell.swift; sourceTree = "<group>"; };
+		05BB0A302B07466800146FE4 /* SupportStatusTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportStatusTblCell.xib; sourceTree = "<group>"; };
+		05BB0A3C2B07670D00146FE4 /* SupportProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportProcess.swift; sourceTree = "<group>"; };
+		52EA38BC22CDD873D3EFC8B8 /* Pods-StackCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackCards.release.xcconfig"; path = "Target Support Files/Pods-StackCards/Pods-StackCards.release.xcconfig"; sourceTree = "<group>"; };
+		652A3FCB633918AB9C6FF529 /* Pods-StackCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackCards.debug.xcconfig"; path = "Target Support Files/Pods-StackCards/Pods-StackCards.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +57,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AA99A89F0A9E52431885F1 /* Pods_StackCards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05654E262B0703E100E9D97B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05882A5A2B05C7A20084D9A9 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		05654E272B070BBC00E9D97B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05882A5C2B05CA610084D9A9 /* Card.swift */,
+				05BB0A3C2B07670D00146FE4 /* SupportProcess.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		05654E282B070BFA00E9D97B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05BB0A2C2B07439300146FE4 /* Cells */,
+				05882A5E2B05CEF40084D9A9 /* CardView.swift */,
+				05882A482B05C0E90084D9A9 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05654E2F2B071FD100E9D97B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05654E2B2B071DE500E9D97B /* HomeVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		05654E302B07230500E9D97B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				05654E312B07231E00E9D97B /* HomeVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		05882A382B05C0E90084D9A9 = {
 			isa = PBXGroup;
 			children = (
 				05882A432B05C0E90084D9A9 /* StackCards */,
 				05882A422B05C0E90084D9A9 /* Products */,
+				228DBECB3790EFC10E3DB102 /* Pods */,
+				CE452E88E83AF09B2BFEB657 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +128,56 @@
 		05882A432B05C0E90084D9A9 /* StackCards */ = {
 			isa = PBXGroup;
 			children = (
-				05882A5C2B05CA610084D9A9 /* Card.swift */,
-				05882A5A2B05C7A20084D9A9 /* Extension.swift */,
+				05654E302B07230500E9D97B /* ViewModel */,
+				05654E2F2B071FD100E9D97B /* ViewController */,
+				05654E282B070BFA00E9D97B /* Views */,
+				05654E272B070BBC00E9D97B /* Models */,
+				05654E262B0703E100E9D97B /* Extension */,
 				05882A442B05C0E90084D9A9 /* AppDelegate.swift */,
 				05882A462B05C0E90084D9A9 /* SceneDelegate.swift */,
-				05882A482B05C0E90084D9A9 /* ViewController.swift */,
-				05882A5E2B05CEF40084D9A9 /* CardView.swift */,
 				05882A4A2B05C0E90084D9A9 /* Main.storyboard */,
 				05882A4D2B05C0EC0084D9A9 /* Assets.xcassets */,
 				05882A4F2B05C0EC0084D9A9 /* LaunchScreen.storyboard */,
 				05882A522B05C0EC0084D9A9 /* Info.plist */,
 			);
 			path = StackCards;
+			sourceTree = "<group>";
+		};
+		05BB0A2C2B07439300146FE4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05BB0A332B074B1E00146FE4 /* Support Satus */,
+				05654E2D2B071ECD00E9D97B /* RatingTblCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		05BB0A332B074B1E00146FE4 /* Support Satus */ = {
+			isa = PBXGroup;
+			children = (
+				05BB0A2F2B07466800146FE4 /* SupportStatusTblCell.swift */,
+				05BB0A302B07466800146FE4 /* SupportStatusTblCell.xib */,
+				05AB3EAA2B07BEF5009CB8A8 /* SupportProcessView.xib */,
+				05AB3EAC2B07BF14009CB8A8 /* SupportProcessView.swift */,
+			);
+			path = "Support Satus";
+			sourceTree = "<group>";
+		};
+		228DBECB3790EFC10E3DB102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				652A3FCB633918AB9C6FF529 /* Pods-StackCards.debug.xcconfig */,
+				52EA38BC22CDD873D3EFC8B8 /* Pods-StackCards.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE452E88E83AF09B2BFEB657 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0212E8D9E41D0E4E9A7573C8 /* Pods_StackCards.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05882A552B05C0EC0084D9A9 /* Build configuration list for PBXNativeTarget "StackCards" */;
 			buildPhases = (
+				8C1A96F996A2062F89E36D7A /* [CP] Check Pods Manifest.lock */,
 				05882A3D2B05C0E90084D9A9 /* Sources */,
 				05882A3E2B05C0E90084D9A9 /* Frameworks */,
 				05882A3F2B05C0E90084D9A9 /* Resources */,
@@ -134,13 +239,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BB0A322B07466800146FE4 /* SupportStatusTblCell.xib in Resources */,
 				05882A512B05C0EC0084D9A9 /* LaunchScreen.storyboard in Resources */,
 				05882A4E2B05C0EC0084D9A9 /* Assets.xcassets in Resources */,
+				05AB3EAB2B07BEF5009CB8A8 /* SupportProcessView.xib in Resources */,
 				05882A4C2B05C0E90084D9A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C1A96F996A2062F89E36D7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StackCards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05882A3D2B05C0E90084D9A9 /* Sources */ = {
@@ -148,10 +280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05882A5F2B05CEF40084D9A9 /* CardView.swift in Sources */,
+				05654E2C2B071DE500E9D97B /* HomeVC.swift in Sources */,
 				05882A5B2B05C7A20084D9A9 /* Extension.swift in Sources */,
+				05654E322B07231E00E9D97B /* HomeVM.swift in Sources */,
 				05882A5D2B05CA610084D9A9 /* Card.swift in Sources */,
 				05882A492B05C0E90084D9A9 /* ViewController.swift in Sources */,
+				05BB0A3D2B07670D00146FE4 /* SupportProcess.swift in Sources */,
+				05654E2E2B071ECD00E9D97B /* RatingTblCell.swift in Sources */,
 				05882A452B05C0E90084D9A9 /* AppDelegate.swift in Sources */,
+				05BB0A312B07466800146FE4 /* SupportStatusTblCell.swift in Sources */,
+				05AB3EAD2B07BF14009CB8A8 /* SupportProcessView.swift in Sources */,
 				05882A472B05C0E90084D9A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +437,7 @@
 		};
 		05882A562B05C0EC0084D9A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 652A3FCB633918AB9C6FF529 /* Pods-StackCards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,7 +448,6 @@
 				INFOPLIST_FILE = StackCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -331,6 +469,7 @@
 		};
 		05882A572B05C0EC0084D9A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52EA38BC22CDD873D3EFC8B8 /* Pods-StackCards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,7 +480,6 @@
 				INFOPLIST_FILE = StackCards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
