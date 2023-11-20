@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Card {
+struct SupportRatingQuest {
     let question: String
 //    let id: String
 //    let closeIcon: String
