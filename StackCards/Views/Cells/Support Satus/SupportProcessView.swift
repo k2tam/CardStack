@@ -7,12 +7,27 @@
 
 import UIKit
 
-class SupportProcessView: UIView {
+enum eSupportProcessStatus {
+    case inActive
+    case active
+    case complete
+}
 
+class SupportProcessView: UIView {
+    
     @IBOutlet var contentView: UIView!
     
-    @IBOutlet weak var leftProcessLine: UIView!
-    @IBOutlet weak var rightProcessLine: UIView!
+    @IBOutlet weak var imageArea: UIView!
+    @IBOutlet weak var iconProcess: UIImageView!
+    
+    @IBOutlet weak var imageStatus: UIImageView!
+    
+    
+    
+    @IBOutlet weak var processTitle: UILabel!
+    @IBOutlet weak var processTime: UILabel!
+    @IBOutlet weak var processDate: UILabel!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,21 +38,45 @@ class SupportProcessView: UIView {
         fatalError("init(coder:) has not been implemented")
         commonInit()
     }
+
+    
+    public func configure(from process: SupportProcess){
+        
+        
+        configForTextTitle(textTitleUI: process.textTitle)
+        configForTextTime(textTimeUI: process.textTime)
+        configForTextDate(textDateUI: process.textDate)
+        
+        
+    }
+    
+    private func configForTextTitle(textTitleUI: TextProcess) {
+        processTitle.text = textTitleUI.text
+        processTitle.font = UIFont.systemFont(ofSize: CGFloat(textTitleUI.size), weight: .medium)
+    }
+    
+    private func configForTextTime(textTimeUI: TextProcess) {
+        processTime.text = textTimeUI.text
+//        processTime.font = UIFont.systemFont(ofSize: CGFloat(textTimeUI.size), weight: .medium)
+        processTime.font = UIFont.systemFont(ofSize: 10, weight: .medium)
+    }
+    
+    private func configForTextDate(textDateUI: TextProcess) {
+        processDate.text = textDateUI.text
+//        processDate.font = UIFont.systemFont(ofSize: CGFloat(textDateUI.size), weight: .medium)
+        processDate.font = UIFont.systemFont(ofSize: 10, weight: .medium)
+    }
+
     
     private func commonInit(){
         Bundle.main.loadNibNamed("SupportProcessView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        setupLayer()
     }
     
     
-     func setupLayer() {
-         rightProcessLine.roundCorners(corners: [.topLeft, .bottomLeft], radius: rightProcessLine.bounds.height / 2)
-         leftProcessLine.roundCorners(corners: [.topRight, .bottomRight], radius: leftProcessLine.bounds.height / 2)
-
-    }
+   
     
     
     

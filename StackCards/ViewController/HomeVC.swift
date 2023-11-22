@@ -28,8 +28,15 @@ class HomeVC: UIViewController {
 
         self.view.addSubViews(tblHome)
         addConstraints()
+        setupVM()
         setupTblHome()
+
         
+    }
+    
+    private func setupVM(){
+        vm.delegate = self
+        vm.fetchHomeData()
     }
     
     private func setupTblHome(){
@@ -52,22 +59,21 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vm.homeItems.count
+        return vm.homeTblVData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch vm.homeItems[indexPath.row]{
-        case .rating:
+        switch vm.homeTblVData[indexPath.row]{
+        case .supportRatingQuests(let listRatingQuest):
             if let cell = tableView.dequeueReusableCell(withIdentifier: RatingTblCell.cellIdentifier, for: indexPath) as? RatingTblCell {
-                cell.configure(listRatings: vm.listRatings)
-                
+                cell.configure(listRatings: listRatingQuest)
                 return cell
 
             }
-        case .supportStatus:
+        case .supportStatus(let supportProcessModel):
             if let cell = tableView.dequeueReusableCell(withIdentifier: SupportStatusTblCell.cellIdentifier, for: indexPath) as? SupportStatusTblCell {
                 
-                cell.configure(listProcess: vm.listProcess)
+                cell.configure(supportProcessModel: supportProcessModel)
                 return cell
             }
         case .space:
@@ -82,15 +88,23 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch vm.homeItems[indexPath.row]{
+        switch vm.homeTblVData[indexPath.row]{
             
-        case .rating:
+        case .supportRatingQuests(_):
             return 250
-        case .supportStatus:
+        case .supportStatus(_):
             return 211
         case .space:
             return 16
         }
     }
+    
+}
+
+extension HomeVC: HomeVMDelegate {
+    func didGetNewHomeData() {
+        tblHome.reloadData()
+    }
+    
     
 }

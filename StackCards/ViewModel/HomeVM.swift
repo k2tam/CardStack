@@ -7,24 +7,74 @@
 
 import Foundation
 
+
+protocol HomeVMDelegate: AnyObject {
+    func didGetNewHomeData()
+}
+
 enum eHomeTblItem {
-    case rating
-    case supportStatus
+    case supportRatingQuests([SupportRatingQuest])
+    case supportStatus(SupportProcessModel)
     case space
 }
 
 
 class HomeVM {
-    var homeItems: [eHomeTblItem] = [.rating,.space,.supportStatus]
+    var sampleListRatings = Array<SupportRatingQuest>.init(repeating: SupportRatingQuest(question: "Bạn thấy dịch vụ bảo trì tại nhà thế nào ?"), count: 1)
     
-    var listRatings = Array<Card>.init(repeating: Card(question: "Bạn thấy dịch vụ bảo trì tại nhà thế nào ?"), count: 3)
+    var homeTblVData: [eHomeTblItem] = []
     
-    var listProcess = [
-        SupportProcess(title: "Tiếp nhận"),
-        SupportProcess(title: "Cử nhân viên"),
-        SupportProcess(title: "Đã đến"),
-        SupportProcess(title: "Hoàn tất"),
-    ]
+    var listSupportRatingsQuest: [SupportRatingQuest] = []
+
+    var supportProcessModel: SupportProcessModel? = nil
+    
+    var delegate: HomeVMDelegate?
+    
+    
+    func composeData() {
+        var temp: [eHomeTblItem] = []
+        homeTblVData = []
+        
+        if !listSupportRatingsQuest.isEmpty{
+            temp.append(.supportRatingQuests(listSupportRatingsQuest))
+        }
+        
+        if let supportProcessModel = supportProcessModel {
+            temp.append(.supportStatus(supportProcessModel))
+        }
+        
+        //Add Space
+        for (index, item) in temp.enumerated() {
+            homeTblVData.append(item)
+            if index != temp.count - 1 {
+                homeTblVData.append(.space)
+            }
+        }
+        
+        //Update new data
+        delegate?.didGetNewHomeData()
+        
+        
+    }
+    
+    
+  
+    func fetchHomeData() {
+            self.listSupportRatingsQuest = self.sampleListRatings
+            self.composeData()
+        
+        
+        
+        HomeManager.callAPIForSupportProcessModel {[weak self] supportProcessModel in
+            self?.supportProcessModel = supportProcessModel
+            self?.composeData()
+
+        }
+    }
+    
+   
+    
+    
     
     
 }

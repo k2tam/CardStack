@@ -37,10 +37,10 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEe-cN-SDQ">
-                        <rect key="frame" x="16" y="42" width="378" height="206"/>
+                        <rect key="frame" x="16" y="42" width="378" height="218"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-h7-gDZ">
-                                <rect key="frame" x="16" y="24" width="346" height="170"/>
+                                <rect key="frame" x="16" y="18" width="346" height="188"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="trailing" secondItem="8ah-h7-gDZ" secondAttribute="trailing" constant="16" id="3ir-cN-5mF"/>
                             <constraint firstAttribute="bottom" secondItem="8ah-h7-gDZ" secondAttribute="bottom" constant="12" id="8m3-l8-7bJ"/>
                             <constraint firstItem="8ah-h7-gDZ" firstAttribute="leading" secondItem="JEe-cN-SDQ" secondAttribute="leading" constant="16" id="VQx-Av-Bdp"/>
-                            <constraint firstItem="8ah-h7-gDZ" firstAttribute="top" secondItem="JEe-cN-SDQ" secondAttribute="top" constant="24" id="vf0-cQ-05f"/>
+                            <constraint firstItem="8ah-h7-gDZ" firstAttribute="top" secondItem="JEe-cN-SDQ" secondAttribute="top" constant="18" id="vf0-cQ-05f"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -56,7 +56,7 @@
                 <constraints>
                     <constraint firstItem="Pqj-2F-Y6N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0QR-8x-Xyp"/>
                     <constraint firstAttribute="trailing" secondItem="JEe-cN-SDQ" secondAttribute="trailing" constant="16" id="0fC-Um-Adq"/>
-                    <constraint firstAttribute="bottom" secondItem="JEe-cN-SDQ" secondAttribute="bottom" constant="24" id="Dvy-4V-kSq"/>
+                    <constraint firstAttribute="bottom" secondItem="JEe-cN-SDQ" secondAttribute="bottom" constant="12" id="Dvy-4V-kSq"/>
                     <constraint firstAttribute="trailing" secondItem="Pqj-2F-Y6N" secondAttribute="trailing" id="Ftz-NE-HRV"/>
                     <constraint firstItem="Pqj-2F-Y6N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HwQ-AB-jml"/>
                     <constraint firstItem="JEe-cN-SDQ" firstAttribute="top" secondItem="Pqj-2F-Y6N" secondAttribute="bottom" constant="12" id="qG8-iX-0j9"/>

@@ -10,7 +10,7 @@ import UIKit
 class RatingTblCell: UITableViewCell {
     static let cellIdentifier = "RatingTblCell"
     
-    var listRatings: [Card] = []
+    var listRatings: [SupportRatingQuest] = []
     
     lazy var cardStack: UIView = {
         let stack = UIView()
@@ -27,17 +27,8 @@ class RatingTblCell: UITableViewCell {
         contentView.addSubViews(cardStack)
         
         
-        cardStack.frame.size = CGSize(width: contentView.bounds.width - 32, height: 250)
-        cardStack.center = contentView.center
-    }
-    
-    override func layoutSubviews() {
-            super.layoutSubviews()
-            cardStack.frame.size = CGSize(width: contentView.frame.width, height: 250)
-            cardStack.center = contentView.center
-            addCards()
 
-        }
+    }
     
     
     required init?(coder: NSCoder) {
@@ -46,8 +37,18 @@ class RatingTblCell: UITableViewCell {
     
 
     
-    public func configure(listRatings: [Card]) {
+    public func configure(listRatings: [SupportRatingQuest]) {
+        //Clear previous view in stack
+        for view in cardStack.subviews {
+            view.removeFromSuperview()
+        }
+        
         self.listRatings = listRatings
+        
+        cardStack.frame.size = CGSize(width: contentView.frame.width, height: 250)
+        cardStack.center = contentView.center
+        addCards()
+        
         
     }
     
