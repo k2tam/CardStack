@@ -21,11 +21,7 @@ class SupportStatusTblCell: UITableViewCell {
     @IBOutlet weak var processStack: UIStackView!
     
     var listProcessModel: [SupportProcess] = []
-    var listProcessAndItsLine: [ProcessAndItsLine] = [] {
-        didSet {
-            animateProcessLine()
-        }
-    }
+    var listProcessAndItsLine: [ProcessAndItsLine] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,15 +31,27 @@ class SupportStatusTblCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        for subview in processStack.subviews {
+                subview.removeFromSuperview()
+            }
+            
+            // Clear the list of processes and lines
+            listProcessModel.removeAll()
+            listProcessAndItsLine.removeAll()
+    }
+    
     public func configure(supportProcessModel: SupportProcessModel) {
         self.listProcessModel = supportProcessModel.uiCode.listProcess
         
-       
+        
         addProcessesToProcessStack()
         
         drawProcessLines()
         
     }
+    
+  
     
     func addProcessesToProcessStack() {
         for (index, process) in self.listProcessModel.enumerated() {
@@ -105,35 +113,7 @@ class SupportStatusTblCell: UITableViewCell {
         }
         
     }
-    
-    private func animateProcessLine() {
-        
-        for process in listProcessAndItsLine {
-            if process.process.isActive {
-                
-                
-                let activeProcessLine = UIView()
-                activeProcessLine.frame.origin = CGPoint(x: process.line.frame.origin.x, y: process.line.frame.origin.y)
-                activeProcessLine.frame.size = CGSize(width: process.line.bounds.width, height: process.line.bounds.height)
-                activeProcessLine.backgroundColor = UIColor(hex: process.process.leftLineColor)
 
-                
-                processStack.addSubview(activeProcessLine)
-                
-                processStack.layoutIfNeeded()
-
-                
-//                UIView.animate(withDuration: 1.0, animations: {
-//                    activeProcessLine.frame.size.width = process.line.frame.width
-//                })
-            }
-        }
-    }
-    
-    
-    
-    
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

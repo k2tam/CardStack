@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SupportProcessView" customModule="StackCards" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="eCa-g6-LU4"/>
-                <outlet property="iconProcess" destination="65Q-3H-w3Y" id="h0H-fx-zIl"/>
+                <outlet property="iconProcess" destination="65Q-3H-w3Y" id="H5z-Yw-LEq"/>
                 <outlet property="imageStatus" destination="ViA-xb-7wf" id="Y4P-Xc-kjC"/>
                 <outlet property="processDate" destination="Twq-IG-9Lj" id="4Ym-Ll-m9Y"/>
                 <outlet property="processTime" destination="xNy-2p-ehq" id="1Xx-Eo-idz"/>
@@ -21,36 +21,36 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="245" height="146"/>
+            <rect key="frame" x="0.0" y="0.0" width="185" height="123"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Tiếp nhận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6x-uJ-Kbv">
-                    <rect key="frame" x="90" y="70" width="65.333333333333314" height="17"/>
+                    <rect key="frame" x="59.999999999999993" y="70" width="65.333333333333314" height="17"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="08:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNy-2p-ehq">
-                    <rect key="frame" x="106.66666666666667" y="89" width="32.000000000000014" height="14.333333333333329"/>
+                    <rect key="frame" x="76.666666666666671" y="89" width="32" height="14.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="30/10/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twq-IG-9Lj">
-                    <rect key="frame" x="89.666666666666671" y="106.33333333333334" width="66.000000000000014" height="14.333333333333329"/>
+                    <rect key="frame" x="59.666666666666657" y="106.33333333333334" width="66" height="14.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick_complete" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-xb-7wf">
-                    <rect key="frame" x="112.66666666666667" y="40" width="20.000000000000014" height="20"/>
+                    <rect key="frame" x="82.666666666666671" y="40" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="53n-Pz-gEE"/>
                         <constraint firstAttribute="width" constant="20" id="qPt-cV-fnb"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="65Q-3H-w3Y">
-                    <rect key="frame" x="108.66666666666667" y="0.0" width="28.000000000000014" height="28"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="65Q-3H-w3Y" customClass="AnimatedImageView" customModule="Kingfisher">
+                    <rect key="frame" x="78.666666666666671" y="0.0" width="28" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="8Uh-Gh-IRl"/>
                         <constraint firstAttribute="width" constant="28" id="rVL-6N-daT"/>
@@ -73,7 +73,7 @@
                 <constraint firstItem="ViA-xb-7wf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rNk-s5-DAe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-364.12213740458014" y="-192.95774647887325"/>
+            <point key="canvasLocation" x="-409.92366412213738" y="-201.05633802816902"/>
         </view>
     </objects>
     <resources>

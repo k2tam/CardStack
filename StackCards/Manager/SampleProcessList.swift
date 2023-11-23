@@ -60,7 +60,7 @@ class SampleData {
                           "imgStatus": "",
                           "leftLineColor": "#B0B0B0",
                           "textTitle": {
-                            "text": "Tiếp nhận",
+                            "text": "Cử nhân viên",
                             "textColor": "#888888",
                             "fontWeight": "medium",
                             "backgroundColor": "",

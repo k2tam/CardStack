@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 
@@ -13,7 +14,7 @@ class SupportProcessView: UIView {
     
     @IBOutlet var contentView: UIView!
     
-    @IBOutlet weak var iconProcess: UIImageView!
+    @IBOutlet weak var iconProcess: AnimatedImageView!
     
     @IBOutlet weak var imageStatus: UIImageView!
     
@@ -68,6 +69,12 @@ class SupportProcessView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        
+        if let url = URL(string: "https://res.cloudinary.com/demo/image/upload/kitten_fighting.gif"){
+            iconProcess.kf.setImage(with: url)
+
+        }
     }
     
     

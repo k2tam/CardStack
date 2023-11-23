@@ -10,7 +10,6 @@ import UIKit
 class RatingTblCell: UITableViewCell {
     static let cellIdentifier = "RatingTblCell"
     
-    var listRatings: [SupportRatingQuest] = []
     
     lazy var cardStack: UIView = {
         let stack = UIView()
@@ -25,11 +24,9 @@ class RatingTblCell: UITableViewCell {
         self.backgroundColor = UIColor(hex: "#F5F5F5")
 
         contentView.addSubViews(cardStack)
-        
-        
-
     }
     
+   
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -43,17 +40,16 @@ class RatingTblCell: UITableViewCell {
             view.removeFromSuperview()
         }
         
-        self.listRatings = listRatings
         
         cardStack.frame.size = CGSize(width: contentView.frame.width, height: 250)
         cardStack.center = contentView.center
-        addCards()
+        addCards(listRatings: listRatings)
         
         
     }
     
     
-    private func addCards() {
+    private func addCards(listRatings: [SupportRatingQuest]) {
         let cardOffSet: CGFloat = 10
         
         for (index, card) in listRatings.enumerated() {

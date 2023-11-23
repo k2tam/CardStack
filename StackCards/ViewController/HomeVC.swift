@@ -35,8 +35,11 @@ class HomeVC: UIViewController {
     }
     
     private func setupVM(){
+      
         vm.delegate = self
         vm.fetchHomeData()
+       
+
     }
     
     private func setupTblHome(){
@@ -76,6 +79,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                 cell.configure(supportProcessModel: supportProcessModel)
                 return cell
             }
+        case .dummy:
+            let cell = UITableViewCell()
+            cell.backgroundColor = UIColor.red
+            return UITableViewCell()
         case .space:
             let cell = UITableViewCell()
             cell.backgroundColor = UIColor(hex: "#F5F5F5")
@@ -96,6 +103,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             return 211
         case .space:
             return 16
+        case .dummy:
+            return 250
         }
     }
     
@@ -103,6 +112,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeVC: HomeVMDelegate {
     func didGetNewHomeData() {
+        
         tblHome.reloadData()
     }
     

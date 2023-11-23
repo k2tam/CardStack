@@ -15,6 +15,7 @@ protocol HomeVMDelegate: AnyObject {
 enum eHomeTblItem {
     case supportRatingQuests([SupportRatingQuest])
     case supportStatus(SupportProcessModel)
+    case dummy
     case space
 }
 
@@ -35,13 +36,35 @@ class HomeVM {
         var temp: [eHomeTblItem] = []
         homeTblVData = []
         
+        
         if !listSupportRatingsQuest.isEmpty{
             temp.append(.supportRatingQuests(listSupportRatingsQuest))
         }
         
         if let supportProcessModel = supportProcessModel {
             temp.append(.supportStatus(supportProcessModel))
+            
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+            temp.append(.dummy)
+
         }
+        
+      
+       
         
         //Add Space
         for (index, item) in temp.enumerated() {
