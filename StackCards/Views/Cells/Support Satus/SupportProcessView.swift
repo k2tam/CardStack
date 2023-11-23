@@ -7,17 +7,12 @@
 
 import UIKit
 
-enum eSupportProcessStatus {
-    case inActive
-    case active
-    case complete
-}
+
 
 class SupportProcessView: UIView {
     
     @IBOutlet var contentView: UIView!
     
-    @IBOutlet weak var imageArea: UIView!
     @IBOutlet weak var iconProcess: UIImageView!
     
     @IBOutlet weak var imageStatus: UIImageView!
