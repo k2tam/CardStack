@@ -27,6 +27,7 @@
 		05D56C872B0DBFE200660725 /* SampleProcessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D56C862B0DBFE200660725 /* SampleProcessList.swift */; };
 		05D56C8A2B0DE25700660725 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D56C892B0DE25700660725 /* HomeManager.swift */; };
 		05D56C8D2B0DF42B00660725 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 05D56C8C2B0DF42B00660725 /* SwiftyJSON */; };
+		05D56C922B0EE09600660725 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 05D56C912B0EE09600660725 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D56C922B0EE09600660725 /* Kingfisher in Frameworks */,
 				05D56C8D2B0DF42B00660725 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +200,7 @@
 			name = StackCards;
 			packageProductDependencies = (
 				05D56C8C2B0DF42B00660725 /* SwiftyJSON */,
+				05D56C912B0EE09600660725 /* Kingfisher */,
 			);
 			productName = StackCards;
 			productReference = 05882A412B05C0E90084D9A9 /* StackCards.app */;
@@ -229,6 +232,7 @@
 			mainGroup = 05882A382B05C0E90084D9A9;
 			packageReferences = (
 				05D56C8B2B0DF42B00660725 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				05D56C902B0EE09600660725 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 05882A422B05C0E90084D9A9 /* Products */;
 			projectDirPath = "";
@@ -511,6 +515,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		05D56C902B0EE09600660725 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -518,6 +530,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05D56C8B2B0DF42B00660725 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		05D56C912B0EE09600660725 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05D56C902B0EE09600660725 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

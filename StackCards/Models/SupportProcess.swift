@@ -8,22 +8,6 @@
 import Foundation
 import SwiftyJSON
 
-
-struct OldSupportProcess {
-    let title: String
-    let time: String
-    let date: String
-    var processStatus: eSupportProcessStatus
-    
-    init(title: String, time: String = "08:15", date: String = "30/10/2023", processStatus: eSupportProcessStatus = .inActive) {
-        self.title = title
-        self.time = time
-        self.date = date
-        self.processStatus = processStatus
-    }
-}
-
-
 struct SupportProcessModel {
     let uiCode: UICode
     
@@ -32,13 +16,10 @@ struct SupportProcessModel {
     }
 }
 
-
 struct UICode {
-    var currentProcessIndex: Int
     var listProcess: [SupportProcess]
     
     init(json: JSON){
-        self.currentProcessIndex = json["uiCode"].intValue
         self.listProcess = json["listProcess"].arrayValue.map({
             SupportProcess(json: $0)
         })
@@ -47,6 +28,7 @@ struct UICode {
 }
 
 struct SupportProcess {
+    var isActive: Bool
     var imgIcon: String
     var imgStatus: String
     var leftLineColor: String
@@ -56,6 +38,7 @@ struct SupportProcess {
     var action: ProcessAction
     
     init(json: JSON ){
+        self.isActive = json["isActive"].boolValue
         self.imgIcon = json["imgIcon"].stringValue
         self.imgStatus = json["imgStatus"].stringValue
         self.leftLineColor = json["leftLineColor"].stringValue

@@ -18,9 +18,9 @@ class SampleData {
                     "params": []
                   },
                   "uiCode": {
-                    "currentProcessIndex" : 3,
                     "listProcess": [
                       {
+                          "isActive": false,
                           "imgIcon": "",
                           "imgStatus": "",
                           "leftLineColor": "#B0B0B0",
@@ -55,6 +55,7 @@ class SampleData {
                           }
                         },
                          {
+                          "isActive": false,
                           "imgIcon": "",
                           "imgStatus": "",
                           "leftLineColor": "#B0B0B0",
@@ -89,6 +90,7 @@ class SampleData {
                           }
                         },
                          {
+                          "isActive": false,
                           "imgIcon": "",
                           "imgStatus": "",
                           "leftLineColor": "#B0B0B0",
@@ -123,9 +125,10 @@ class SampleData {
                           }
                         },
                          {
+                          "isActive": true,
                           "imgIcon": "",
                           "imgStatus": "",
-                          "leftLineColor": "#B0B0B0",
+                          "leftLineColor": "#2631CF",
                           "textTitle": {
                             "text": "Hoàn tất",
                             "textColor": "#888888",
