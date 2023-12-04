@@ -14,6 +14,9 @@ protocol CardViewDelegate: AnyObject {
 class CardView: UIView {
     weak var delegate: CardViewDelegate?
     
+    var topConstraintOfStarsStack: NSLayoutConstraint!
+    var bottomConstraintOfStarsStack: NSLayoutConstraint!
+    
     lazy var imgRating: UIImageView = {
         let imgV = UIImageView()
         imgV.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +36,8 @@ class CardView: UIView {
     lazy var tvQuestion: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.font = UIFont.boldSystemFont(ofSize: 16)
+        lb.font = UIFont.systemFont(ofSize: 18)
+        lb.numberOfLines = 2
         lb.textAlignment = .center
         return lb
     }()
@@ -98,6 +102,14 @@ class CardView: UIView {
     }
     
     private func addConstraints(){
+        topConstraintOfStarsStack = starsStack.topAnchor.constraint(equalTo: tvQuestion.bottomAnchor, constant: 16)
+        bottomConstraintOfStarsStack =  starsStack.bottomAnchor.constraint(equalTo: tvUnsatisfied.topAnchor, constant: -16)
+
+        
+        topConstraintOfStarsStack.isActive = true
+        bottomConstraintOfStarsStack.isActive = true
+
+        
         NSLayoutConstraint.activate([
             btnClose.heightAnchor.constraint(equalToConstant: 24),
             btnClose.widthAnchor.constraint(equalToConstant: 24),
@@ -112,15 +124,14 @@ class CardView: UIView {
             imgRating.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             
             tvQuestion.topAnchor.constraint(equalTo: imgRating.bottomAnchor, constant: 16),
-            tvQuestion.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            tvQuestion.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-//            tvQuestion.heightAnchor.constraint(equalToConstant: 27),
+            tvQuestion.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            tvQuestion.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            tvQuestion.heightAnchor.constraint(equalToConstant: 54),
             
             starsStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             starsStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
-            starsStack.topAnchor.constraint(equalTo: tvQuestion.bottomAnchor, constant: 16),
+            starsStack.bottomAnchor.constraint(equalTo: tvUnsatisfied.topAnchor, constant: -16),
             
-            tvUnsatisfied.topAnchor.constraint(equalTo: starsStack.bottomAnchor, constant: 16),
             tvUnsatisfied.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             tvUnsatisfied.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
             

@@ -70,6 +70,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         case .supportRatingQuests(let listRatingQuest):
             if let cell = tableView.dequeueReusableCell(withIdentifier: RatingTblCell.cellIdentifier, for: indexPath) as? RatingTblCell {
                 cell.configure(listRatings: listRatingQuest)
+                cell.clipsToBounds = true
                 return cell
 
             }
@@ -98,7 +99,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         switch vm.homeTblVData[indexPath.row]{
             
         case .supportRatingQuests(_):
-            return 250
+            return 279
         case .supportStatus(_):
             return 211
         case .space:

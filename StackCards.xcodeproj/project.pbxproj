@@ -112,7 +112,6 @@
 			children = (
 				05882A432B05C0E90084D9A9 /* StackCards */,
 				05882A422B05C0E90084D9A9 /* Products */,
-				228DBECB3790EFC10E3DB102 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,13 +169,6 @@
 				05D56C892B0DE25700660725 /* HomeManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		228DBECB3790EFC10E3DB102 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

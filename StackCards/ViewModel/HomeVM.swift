@@ -21,7 +21,13 @@ enum eHomeTblItem {
 
 
 class HomeVM {
-    var sampleListRatings = Array<SupportRatingQuest>.init(repeating: SupportRatingQuest(question: "Bạn thấy dịch vụ bảo trì tại nhà thế nào ?"), count: 1)
+    var sampleListRatings = [
+        SupportRatingQuest(question: "1 Quý khách đánh giá chất lượng hỗ trợ tại nhà thế nào ?"),
+        SupportRatingQuest(question: "2 Quý khách đánh giá chất lượng hỗ trợ tại nhà thế nào ?"),
+        SupportRatingQuest(question: "3 Quý khách đánh giá chất lượng hỗ trợ tại nhà thế nào ?"),
+        SupportRatingQuest(question: "4 Quý khách đánh giá chất lượng hỗ trợ tại nhà thế nào ?"),
+        SupportRatingQuest(question: "5 Quý khách đánh giá chất lượng hỗ trợ tại nhà thế nào ?"),
+    ]
     
     var homeTblVData: [eHomeTblItem] = []
     
@@ -62,10 +68,7 @@ class HomeVM {
             temp.append(.dummy)
 
         }
-        
-      
-       
-        
+  
         //Add Space
         for (index, item) in temp.enumerated() {
             homeTblVData.append(item)
